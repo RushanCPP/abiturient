@@ -1,14 +1,47 @@
 package com.example.abiturient;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
-// Something
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        /*
+         *                                                    ФИЧА 1 Возможность включать режимы
+         *
+         *                                                  1         Хогвартс          ON/OFF
+         *                                                           +======================+
+         * +================================+                        V                      V
+         * |            Фрагмент            | <=================[ [ Список вузов ] или [ Проф.тест ] или [ Информация про вуз ] ]
+         * |                                |                       ^                                          ^
+         * |                                |                       +                                          |
+         * |                                |                       +==========================================+
+         * |                                |                       class University
+         * |                                |               2      ДАННЫЕ ПРО ВУЗЫ <================ База данных
+         * |                                |                                   Имя вуза = getName()
+         * |                                |                                   Степендия = getMoney()
+         * |                                |                                   Стоимость обучения = getEducationCost()
+         * |                                |                                   Направление вуза = getDirection() -> enum Direction
+         * |                                |                                   Картинка = getImage()
+         * |                                |                                   Логотип = getLogo()
+         * |                                |                                   Факультет = getFaculties()
+         * |                                |                                   Год основания = getDate()
+         * |                                |                                   Где расположен = getLocation()
+         * |                                |                                   Директор/Декан = getHeadmasterName()
+         * |                                |                                   Главная Ссылка сайта = getLink()
+         * |                                |                                   Документы = getDocuments()
+         * |                                |                                   Проходные баллы =  getPassingGrade() -> Ege
+         * |                                |                                   Вузовские олимпиады = getOlympiads() -> class Olympiads
+         * |                                |                                   // Доп поля TODO
+         * |                                |               3       Профиль пользователя == class User
+         * |                                |                                   Имя, Фамилия, Отчество = getFullName()
+         * |                                |                                   Баллы ЕГЭ (ОГЭ) = getScoreEge() -> Ege
+         * |                                |                                   Достижения = getAchievement() -> ArrayList<Olympiads>
+         * |                                |                                   Пров.Тест = getResult() -> enum Direction
+         * +================================+
+         *
+         */
     }
 }
