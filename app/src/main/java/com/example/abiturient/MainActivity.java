@@ -8,6 +8,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        // TODO:    1) Написать адаптер University -> ListView
+        //          2) Написать пережачу данных в UniversityFragment
+        //          3) Разобраться с иерархией классов
+        //          4) Дописать основные классы
+        //          5) Попросить фронтендера написать стиль и fill'еры его стилей
+        //          6) Написать взамиодействие с базой данных
         /*
          *                                                    ФИЧА 1 Возможность включать режимы
          *
@@ -20,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
          * |                                |                       +==========================================+
          * |                                |                       class University
          * |                                |               2      ДАННЫЕ ПРО ВУЗЫ <================ База данных
-         * |                                |                                   Имя вуза = getName()
+         * |                                |                                   Имя вуза = getName()                                    +
          * |                                |                                   Степендия = getMoney()
          * |                                |                                   Стоимость обучения = getEducationCost()
          * |                                |                                   Направление вуза = getDirection() -> enum Direction
@@ -29,17 +35,19 @@ public class MainActivity extends AppCompatActivity {
          * |                                |                                   Факультет = getFaculties()
          * |                                |                                   Год основания = getDate()
          * |                                |                                   Где расположен = getLocation()
-         * |                                |                                   Директор/Декан = getHeadmasterName()
+         * |                                |                                   Директор/Декан = getHeadmasterName()                    +
          * |                                |                                   Главная Ссылка сайта = getLink()
          * |                                |                                   Документы = getDocuments()
          * |                                |                                   Проходные баллы =  getPassingGrade() -> Ege
-         * |                                |                                   Вузовские олимпиады = getOlympiads() -> class Olympiads
+         * |                                |                                   Вузовские олимпиады = getOlympiads() -> ArrayList<Olympiad>
+         * |                                |                                   Наличие общежития = hasDormitory() -> bool
          * |                                |                                   // Доп поля TODO
          * |                                |               3       Профиль пользователя == class User
-         * |                                |                                   Имя, Фамилия, Отчество = getFullName()
+         * |                                |                                   Имя, Фамилия, Отчество = getFullName()                  +
          * |                                |                                   Баллы ЕГЭ (ОГЭ) = getScoreEge() -> Ege
-         * |                                |                                   Достижения = getAchievement() -> ArrayList<Olympiads>
-         * |                                |                                   Пров.Тест = getResult() -> enum Direction
+         * |                                |                                   Достижения = getAchievement() -> ArrayList<Olympiad>
+         * |                                |                                   Проф.Тест = getResult() -> enum Direction
+         * |                                |                                   Местоположение = getLocation()
          * +================================+
          *
          */
