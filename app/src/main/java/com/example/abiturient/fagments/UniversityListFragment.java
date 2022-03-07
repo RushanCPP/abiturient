@@ -8,8 +8,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.example.abiturient.R;
+import com.example.abiturient.adapter.UniversityArrayAdapter;
+import com.example.abiturient.database.FakeDataBase;
+import com.example.abiturient.education.University;
+import com.example.abiturient.fillers.UniversityFiller;
 
 
 public class UniversityListFragment extends Fragment {
@@ -26,6 +31,15 @@ public class UniversityListFragment extends Fragment {
         ListView listView = view.findViewById(R.id.university_list_fragment_list);
         // TODO: переход к информации о вузе при нажатии
         //       c передачей данных о нажатом вузе!!!!!!
+        listView.setAdapter(
+                new UniversityArrayAdapter(getContext(), R.layout.adapter_item,
+                        new FakeDataBase().getData(), new UniversityFiller() {
+                    @Override
+                    public void fill(View view, University university) {
+                        ((TextView)view.findViewById(R.id.name_university)).setText(university.getName());
+                    }
+                }
+                ));
         return view;
     }
 }

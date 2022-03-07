@@ -1,5 +1,6 @@
 package com.example.abiturient.education;
 
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 
@@ -14,7 +15,22 @@ public class University {
     private boolean dormitory;
     private boolean exam;
 
-    public University() {}
+    public University()  {
+        this.name = "МГУ";
+        try {
+            this.url = new URL("https://www.msu.ru/");
+        } catch (MalformedURLException exception) {
+            // ignore
+        }
+
+        this.educationCost = 100;
+        this.scholarship = 100;
+        this.location = new Location("Москва", "Москва", 1);
+        this.lessonsUSE = new USE.Lesson[]{USE.Lesson.Math};
+        this.olympiads = new ArrayList<>();
+        this.dormitory = true;
+        this.exam = true;
+    }
 
     public University(String name, URL url, int educationCost, int scholarship,
                       Location location, USE.Lesson[] lessonsUSE,
