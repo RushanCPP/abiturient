@@ -101,4 +101,5 @@ public class University {
     public ArrayList<Olympiad> getOlympiads() {
         return olympiads;
     }
+
 }
