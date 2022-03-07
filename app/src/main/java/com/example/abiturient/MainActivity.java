@@ -8,9 +8,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        // TODO:    1) Написать адаптер University -> ListView
-        //          2) Написать пережачу данных в UniversityFragment
-        //          3) Разобраться с иерархией классов
+        // TODO:    1) Написать адаптер University -> ListView          (ArrayAdapter<University>)
+        //          2) Написать пережачу данных в UniversityFragment    (Возможно через Bundle)
+        //          3) Разобраться с иерархией классов                  (Фотку перешлю)
         //          4) Дописать основные классы
         //          5) Попросить фронтендера написать стиль и fill'еры его стилей
         //          6) Написать взамиодействие с базой данных

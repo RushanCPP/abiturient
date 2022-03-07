@@ -1,4 +1,4 @@
-package com.example.abiturient;
+package com.example.abiturient.fagments;
 
 import android.os.Bundle;
 
@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.abiturient.Education.University;
+import com.example.abiturient.R;
+import com.example.abiturient.fillers.UniversityFiller;
 
 public class UniversityFragment extends Fragment {
     // TODO: разобраться как передать информацию о нажатом вузе фрагменту!!!

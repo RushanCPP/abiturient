@@ -1,4 +1,4 @@
-package com.example.abiturient;
+package com.example.abiturient.fagments;
 
 import android.os.Bundle;
 
@@ -8,6 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
+
+import com.example.abiturient.R;
 
 
 public class UniversityListFragment extends Fragment {
