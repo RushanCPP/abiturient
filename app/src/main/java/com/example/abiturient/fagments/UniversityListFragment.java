@@ -3,13 +3,16 @@ package com.example.abiturient.fagments;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.example.abiturient.MainActivity;
 import com.example.abiturient.R;
 import com.example.abiturient.adapter.UniversityArrayAdapter;
 import com.example.abiturient.database.FakeDataBase;
@@ -38,8 +41,16 @@ public class UniversityListFragment extends Fragment {
                     public void fill(View view, University university) {
                         ((TextView)view.findViewById(R.id.name_university)).setText(university.getName());
                     }
-                }
+                } // TODO: Сказать frontend-еру написать класс
                 ));
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                ((MainActivity)getActivity()).
+                        setNowUniversity((University) listView.getItemAtPosition(position));
+                Navigation.findNavController(view).navigate(R.id.action_universityListFragment_to_universityFragment);
+            }
+        });
         return view;
     }
 }

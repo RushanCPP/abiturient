@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.abiturient.MainActivity;
 import com.example.abiturient.education.University;
 import com.example.abiturient.R;
 import com.example.abiturient.fillers.UniversityFiller;
@@ -29,8 +30,8 @@ public class UniversityFragment extends Fragment {
             @Override
             public void fill(View view, University university) {
                 ((TextView)view.findViewById(R.id.name_university)).setText(university.getName());
-            }
-        }.fill(view, new University());
+            } // TODO: Сказать frontend-еру написать класс
+        }.fill(view, ((MainActivity) getActivity()).getNowUniversity());
         return view;
     }
 }
